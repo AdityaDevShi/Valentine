@@ -2,7 +2,7 @@
 
 A romantic and interactive way to ask your special someone to be your Valentine! This web application features a memory card game in a heart shape, where matching all pairs reveals a special Valentine's proposal with cute animations and effects.
 
-![Demo Preview](public/github-demo.gif)
+![Demo Preview]
 
 ## Demo 🎮
 
@@ -100,15 +100,6 @@ This project is licensed under the MIT License.
 
 - Inspired by love and creativity
 - Built with Next.js 15 App Router
-
-## Author ✍️
-
-visibait - [https://visibait.com]
-
-## Donate
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/visibait)
-
----
 
 Made with ❤️ for my Valentine
 
