@@ -24,10 +24,7 @@ export default function TextFooter() {
       </h1>
 
       {/* Copyright */}
-      <p className="absolute bottom-5 right-5 text-rose-800 text-sm opacity-40 hover:opacity-80">
-        © {new Date().getFullYear()}{" "}
-        <Link href="https://visibait.com">visibait.com</Link>
-      </p>
+
     </>
   );
 }
