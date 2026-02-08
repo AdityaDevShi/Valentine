@@ -9,6 +9,8 @@ import OrientationGuard from "@/components/OrientationGuard";
 
 const ANIM_DURATION = 2;
 
+import CapybaraAnimation from "@/components/CapybaraAnimation";
+
 export default function Home() {
   const [showValentinesProposal, setShowValentinesProposal] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -22,7 +24,7 @@ export default function Home() {
 
   return (
     <OrientationGuard>
-      <main className="flex items-center justify-center min-h-screen bg-black overflow-hidden relative">
+      <main className="flex items-center justify-center min-h-screen bg-gradient-to-br from-rose-100 to-amber-50 overflow-hidden relative">
         {!showValentinesProposal ? (
           <motion.div
             initial={{ opacity: 1 }}
@@ -44,6 +46,7 @@ export default function Home() {
             <ValentinesProposal />
           </motion.div>
         )}
+        {!showValentinesProposal && <CapybaraAnimation />}
       </main>
     </OrientationGuard>
   );

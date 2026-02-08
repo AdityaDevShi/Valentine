@@ -6,24 +6,24 @@ import { useState, useEffect } from "react";
 
 // 18 images
 const images = [
-  "/game-photos/1.avif",
-  "/game-photos/2.avif",
-  "/game-photos/3.avif",
-  "/game-photos/4.avif",
-  "/game-photos/5.avif",
-  "/game-photos/6.avif",
-  "/game-photos/7.avif",
-  "/game-photos/8.avif",
-  "/game-photos/9.avif",
-  "/game-photos/10.avif",
-  "/game-photos/11.avif",
-  "/game-photos/12.avif",
-  "/game-photos/13.avif",
-  "/game-photos/14.avif",
-  "/game-photos/15.avif",
-  "/game-photos/16.avif",
-  "/game-photos/17.avif",
-  "/game-photos/18.avif",
+  "/game-photos/1.jpeg",
+  "/game-photos/2.jpeg",
+  "/game-photos/3.jpeg",
+  "/game-photos/4.jpeg",
+  "/game-photos/5.jpeg",
+  "/game-photos/6.jpeg",
+  "/game-photos/7.jpeg",
+  "/game-photos/8.jpeg",
+  "/game-photos/9.jpeg",
+  "/game-photos/10.jpeg",
+  "/game-photos/11.jpeg",
+  "/game-photos/12.jpeg",
+  "/game-photos/13.jpeg",
+  "/game-photos/14.jpeg",
+  "/game-photos/15.gif",
+  "/game-photos/16.jpeg",
+  "/game-photos/17.gif",
+  "/game-photos/18.gif",
 ];
 
 // Create 18 pairs of images (36 images in total)
@@ -57,7 +57,11 @@ export default function PhotoPairGame({
   const [selected, setSelected] = useState<number[]>([]);
   const [matched, setMatched] = useState<number[]>([]);
   const [incorrect, setIncorrect] = useState<number[]>([]);
-  const [images] = useState(() => shuffleArray([...imagePairs]));
+  const [images, setImages] = useState<string[]>([...imagePairs]);
+
+  useEffect(() => {
+    setImages(shuffleArray([...imagePairs]));
+  }, []);
 
   const handleClick = async (index: number) => {
     if (selected.length === 2 || matched.includes(index) || selected.includes(index)) return;
